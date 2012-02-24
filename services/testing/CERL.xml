@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<service id="solr" xmlns="http://www.indexdata.com/pazpar2/1.0">
+<service id="CERL" xmlns="http://www.indexdata.com/pazpar2/1.0">
 <!-- 
-	Service using solr.
-
+	Targets in CERL Portal
+	
+	http://cerl.epc.ub.uu.se/sportal/
+	
 	2011: Sven-S. Porst, SUB Göttingen <porst@sub.uni-goettingen.de>
 -->
 
-	<settings src="settings/vifamath-solr.xml"/>
 
-	<settings src="settings/SUB-Guides-solr.xml"/>
+	<settings src="settings/testing/Denmark.xml"/>
 	<settings>
-		<set target="ssgfi1.sub.uni-goettingen.de:8081/solr/math" name="pz:name" value="Math-Guide (Solr)"/>
-		<set target="ssgfi1.sub.uni-goettingen.de:8081/solr/hist" name="pz:name" value="History-Guide (Solr)"/>
-		<set target="ssgfi1.sub.uni-goettingen.de:8081/solr/lit" name="pz:name" value="Anglistik-Guide (Solr)"/>
+		<set target="z3950.kb.dk:2100/KBH01" name="pz:name" value="Kongelige Bibliotek Manuscripts"/>
 	</settings>
-	<settings src="settings/vifamath-solr.xml"/>
-	<settings src="settings/gbv-solr.xml"/>
+
+	<settings src="settings/testing/Scotland.xml"/>
+	<settings>
+		<set target="z3950.nls.uk:7390/VOYAGER" name="pz:name" value="National Library of Scotland Manuscripts"/>
+	</settings>
+
+	<settings src="settings/gbv-sru-neu.xml"/>
+	<settings>
+		<set target="sru.gbv.de/eromm" name="pz:name" value="EROMM"/>
+		<set target="sru.gbv.de/vd17" name="pz:name" value="VD17"/>
+		<set target="sru.gbv.de/gvk" name="pz:name" value="GVK Handschriften"/>
+		<set target="sru.gbv.de/gvk" name="pz:pqf_prefix" value="@and @attr 5=1 @attr 1=pica.mak H"/>
+	</settings>
+
 
 
 	<!-- we try to keep same order as in marc21.xsl -->
